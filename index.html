@@ -52,6 +52,22 @@
         .box-3d-container:hover {
             transform: rotate(0deg) scale(1.02);
         }
+        /* Snowing Effect */
+        .snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="5" fill="white"/></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="3" fill="white"/></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="4" fill="white"/></svg>');
+            background-repeat: repeat;
+            animation: snow-fall 20s linear infinite;
+            opacity: 0.6;
+        }
+        @keyframes snow-fall {
+            0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+            100% { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -77,6 +93,7 @@
         <!-- Hero Section -->
         <section class="relative flex items-center py-20 md:py-32 px-6 overflow-hidden min-h-[60vh] md:min-h-[80vh]" style="background-image: url('hoppa-background.png'); background-size: cover; background-position: center;">
             <div class="absolute top-0 left-0 w-full h-full bg-black/20"></div> <!-- Added a slight overlay for text readability -->
+            <div class="snow"></div> <!-- Snowing effect overlay -->
             <div class="relative z-10 text-left container mx-auto">
                 <h2 class="font-heading text-5xl md:text-8xl text-white drop-shadow-lg">Hoppa</h2>
                 <p class="text-xl md:text-2xl mt-4 text-sky-100 max-w-lg">The coolest penguin in all of crypto!</p>
