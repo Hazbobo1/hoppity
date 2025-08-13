@@ -186,9 +186,10 @@
         </section>
 
         <!-- Meme Gallery Section -->
-        <section id="memes" class="py-20 px-6 bg-white">
-            <div class="container mx-auto text-center">
-                <h3 class="font-heading text-4xl md:text-5xl text-sky-600">Meme Gallery</h3>
+        <section id="memes" class="relative py-20 px-6 bg-white" style="background-image: url('meme-gallery-background.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div> <!-- Overlay for readability -->
+            <div class="container mx-auto text-center relative z-10">
+                <h3 class="font-heading text-4xl md:text-5xl text-white">Meme Gallery</h3>
                 <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <img src="https://placehold.co/400x400/38B6FF/FFFFFF?text=Hoppa+Meme" alt="Meme 1" class="rounded-lg hover:scale-105 transition-transform shadow-lg">
                     <img src="https://placehold.co/400x400/38B6FF/FFFFFF?text=Waddle+Waddle" alt="Meme 2" class="rounded-lg hover:scale-105 transition-transform shadow-lg">
