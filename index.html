@@ -48,9 +48,16 @@
             box-shadow: 8px 8px 0px #7dd3fc; /* medium sky blue */
             transform: rotate(-2deg);
             transition: transform 0.3s ease-in-out;
+            animation: float-about 6s ease-in-out infinite;
         }
         .box-3d-container:hover {
             transform: rotate(0deg) scale(1.02);
+        }
+        /* Floating animation for About section */
+        @keyframes float-about {
+            0% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-15px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(-2deg); }
         }
         /* New Snowing Effect */
         .snow-container {
