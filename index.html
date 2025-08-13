@@ -64,7 +64,7 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="relative text-center py-20 md:py-32 px-6 overflow-hidden" style="background-image: url('hoppa-background.jpg'); background-size: cover; background-position: center;">
+        <section class="relative text-center py-20 md:py-32 px-6 overflow-hidden" style="background-image: url('hoppa-background.png'); background-size: cover; background-position: center;">
             <div class="absolute top-0 left-0 w-full h-full bg-black/20"></div> <!-- Added a slight overlay for text readability -->
             <div class="relative z-10">
                 <h2 class="font-heading text-5xl md:text-8xl text-white drop-shadow-lg">Hoppa</h2>
@@ -72,7 +72,7 @@
                 
                 <div class="mt-12 flex justify-center space-x-4">
                     <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Buy Now</a>
-                    <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Chart</a>
+                    <a href="https://www.geckoterminal.com/abstract/pools/0x1a6d61d70e4af513f59bf0fb2ca7281ba2d0c0a2" target="_blank" rel="noopener noreferrer" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Chart</a>
                 </div>
             </div>
         </section>
@@ -87,11 +87,18 @@
 
         <!-- About Section -->
         <section id="about" class="py-20 px-6 bg-white">
-            <div class="container mx-auto text-center max-w-4xl">
-                <h3 class="font-heading text-4xl md:text-5xl text-sky-600">About Hoppa</h3>
-                <p class="mt-6 text-lg text-slate-600 leading-relaxed">
-                    Hoppa isn't your average penguin. Born in the blocky icebergs of the digital tundra, he learned to code before he could swim. With a wink and a nod, Hoppa is here to slide into the crypto scene and shake things up. He's building a community-first igloo where everyone is welcome. Join the colony and let's hop to the moon!
-                </p>
+            <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- Hoppa Character Image -->
+                <div class="md:w-1/3">
+                    <img src="hoppa-character.png" alt="Hoppa Character" class="rounded-lg shadow-2xl w-full max-w-xs mx-auto">
+                </div>
+                <!-- About Text -->
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h3 class="font-heading text-4xl md:text-5xl text-sky-600">About Hoppa</h3>
+                    <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                        Hoppa isn't your average penguin. Born in the blocky icebergs of the digital tundra, he learned to code before he could swim. With a wink and a nod, Hoppa is here to slide into the crypto scene and shake things up. He's building a community-first igloo where everyone is welcome. Join the colony and let's hop to the moon!
+                    </p>
+                </div>
             </div>
         </section>
         
@@ -155,4 +162,3 @@
 
 </body>
 </html>
-
