@@ -30,15 +30,6 @@
             0% { transform: translateX(0%); }
             100% { transform: translateX(-100%); }
         }
-        /* Simple floating animation for the hero image */
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
         /* Custom button style with shadow */
         .btn-3d {
             box-shadow: 0 5px 0 #1E40AF;
@@ -92,21 +83,6 @@
                 <h2 class="font-heading text-5xl md:text-8xl text-white drop-shadow-lg">Hoppa</h2>
                 <p class="text-xl md:text-2xl mt-4 text-sky-100 font-semibold">The coolest penguin in all of crypto!</p>
                 
-                <!-- Hoppa Mascot SVG -->
-                <div class="mt-8 float-animation">
-                    <svg class="w-48 h-48 md:w-64 md:h-64 mx-auto" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <rect x="25" y="20" width="100" height="110" fill="#000000" rx="10"/>
-                            <rect x="35" y="80" width="80" height="45" fill="#FFFFFF" rx="5"/>
-                            <path d="M 45 60 L 65 70 L 45 80" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
-                            <rect x="85" y="60" width="30" height="30" fill="#FFFFFF" rx="3"/>
-                            <rect x="95" y="70" width="10" height="10" fill="#000000"/>
-                            <rect x="60" y="100" width="45" height="10" fill="#FBBF24" rx="2"/>
-                            <rect x="60" y="112" width="45" height="10" fill="#FBBF24" rx="2"/>
-                        </g>
-                    </svg>
-                </div>
-
                 <div class="mt-12 flex justify-center space-x-4">
                     <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Buy Now</a>
                     <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Chart</a>
