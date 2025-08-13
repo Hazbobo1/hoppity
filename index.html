@@ -84,10 +84,13 @@
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                 <h1 class="font-heading text-2xl text-white" style="text-shadow: 1px 1px 2px #0c4a6e;">Hoppa</h1>
             </div>
-            <nav class="hidden md:flex items-center space-x-6 text-white">
-                <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
-                <a href="#tokenomics" class="hover:text-sky-200 transition-colors">Tokenomics</a>
-                <a href="#memes" class="hover:text-sky-200 transition-colors">Memes</a>
+            <!-- Navigation Bubble -->
+            <nav class="hidden md:flex bg-sky-600/70 rounded-full shadow-inner">
+                <div class="flex items-center space-x-8 px-8 py-2 text-white">
+                    <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
+                    <a href="#tokenomics" class="hover:text-sky-200 transition-colors">Tokenomics</a>
+                    <a href="#memes" class="hover:text-sky-200 transition-colors">Memes</a>
+                </div>
             </nav>
             <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full transition-all duration-300 btn-3d">Buy $HOPPA</a>
         </div>
@@ -210,7 +213,8 @@
                 
                 snowflake.style.left = `${Math.random() * 100}vw`;
                 snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // fall speed
-                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                // Use a negative delay to make snowflakes start in random positions
+                snowflake.style.animationDelay = `-${Math.random() * 10}s`;
                 
                 snowContainer.appendChild(snowflake);
             }
