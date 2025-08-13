@@ -14,12 +14,10 @@
             font-family: 'Luckiest Guy', cursive;
             background-color: #F0F9FF; /* Light sky blue background */
             color: #0C4A6E; /* Dark blue text */
-            /* Adding a little letter spacing can improve readability for display fonts */
             letter-spacing: 0.5px;
         }
         .font-heading {
             font-family: 'Luckiest Guy', cursive;
-            /* 3D effect for headings */
             text-shadow: 2px 2px 0px #A5D8FF, 4px 4px 0px #77BFF2;
         }
         /* Marquee animation */
@@ -40,6 +38,19 @@
         .btn-3d:active {
             transform: translateY(3px);
             box-shadow: 0 2px 0 #1E40AF;
+        }
+        /* 3D box effect for the character image */
+        .box-3d-container {
+            background-color: #e0f2fe; /* light sky blue */
+            border: 4px solid #0c4a6e; /* dark blue */
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 8px 8px 0px #7dd3fc; /* medium sky blue */
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease-in-out;
+        }
+        .box-3d-container:hover {
+            transform: rotate(0deg) scale(1.02);
         }
     </style>
 </head>
@@ -64,15 +75,15 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="relative text-center py-20 md:py-32 px-6 overflow-hidden" style="background-image: url('hoppa-background.png'); background-size: cover; background-position: center;">
+        <section class="relative flex items-center py-20 md:py-32 px-6 overflow-hidden min-h-[60vh] md:min-h-[80vh]" style="background-image: url('hoppa-background.png'); background-size: cover; background-position: center;">
             <div class="absolute top-0 left-0 w-full h-full bg-black/20"></div> <!-- Added a slight overlay for text readability -->
-            <div class="relative z-10">
+            <div class="relative z-10 text-left container mx-auto">
                 <h2 class="font-heading text-5xl md:text-8xl text-white drop-shadow-lg">Hoppa</h2>
-                <p class="text-xl md:text-2xl mt-4 text-sky-100">The coolest penguin in all of crypto!</p>
+                <p class="text-xl md:text-2xl mt-4 text-sky-100 max-w-lg">The coolest penguin in all of crypto!</p>
                 
-                <div class="mt-12 flex justify-center space-x-4">
-                    <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Buy Now</a>
-                    <a href="https://www.geckoterminal.com/abstract/pools/0x1a6d61d70e4af513f59bf0fb2ca7281ba2d0c0a2" target="_blank" rel="noopener noreferrer" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg">Chart</a>
+                <div class="mt-8 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg text-center">Buy Now</a>
+                    <a href="https://www.geckoterminal.com/abstract/pools/0x1a6d61d70e4af513f59bf0fb2ca7281ba2d0c0a2" target="_blank" rel="noopener noreferrer" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg text-center">Chart</a>
                 </div>
             </div>
         </section>
@@ -87,10 +98,12 @@
 
         <!-- About Section -->
         <section id="about" class="py-20 px-6 bg-white">
-            <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <!-- Hoppa Character Image -->
-                <div class="md:w-1/3">
-                    <img src="hoppa-character.png" alt="Hoppa Character" class="rounded-lg shadow-2xl w-full max-w-xs mx-auto">
+            <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                <!-- Hoppa Character Image with 3D Box -->
+                <div class="md:w-1/3 flex-shrink-0">
+                    <div class="box-3d-container">
+                        <img src="hoppa-character.png" alt="Hoppa Character" class="rounded-lg w-full max-w-xs mx-auto">
+                    </div>
                 </div>
                 <!-- About Text -->
                 <div class="md:w-2/3 text-center md:text-left">
