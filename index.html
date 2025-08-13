@@ -84,7 +84,7 @@
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                 <h1 class="font-heading text-2xl text-white" style="text-shadow: 1px 1px 2px #0c4a6e;">Hoppa</h1>
             </div>
-            <!-- Navigation Bubble -->
+            <!-- Desktop Navigation Bubble -->
             <nav class="hidden md:flex bg-sky-600/70 rounded-full shadow-inner">
                 <div class="flex items-center space-x-8 px-8 py-2 text-white">
                     <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
@@ -92,7 +92,20 @@
                     <a href="#memes" class="hover:text-sky-200 transition-colors">Memes</a>
                 </div>
             </nav>
-            <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full transition-all duration-300 btn-3d">Buy $HOPPA</a>
+            <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="hidden sm:block bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full transition-all duration-300 btn-3d">Buy $HOPPA</a>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-white hover:bg-sky-600">About</a>
+            <a href="#tokenomics" class="block py-2 px-4 text-white hover:bg-sky-600">Tokenomics</a>
+            <a href="#memes" class="block py-2 px-4 text-white hover:bg-sky-600">Memes</a>
+            <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" class="block py-4 px-4 text-center text-white bg-blue-600 hover:bg-blue-700">Buy $HOPPA</a>
         </div>
     </header>
 
@@ -106,9 +119,9 @@
                 <h2 class="font-heading text-5xl md:text-8xl text-white drop-shadow-lg">Hoppa</h2>
                 <p class="text-xl md:text-2xl mt-4 text-sky-100 max-w-lg">The coolest penguin in all of crypto!</p>
                 
-                <div class="mt-8 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg text-center">Buy Now</a>
-                    <a href="https://www.geckoterminal.com/abstract/pools/0x1a6d61d70e4af513f59bf0fb2ca7281ba2d0c0a2" target="_blank" rel="noopener noreferrer" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 rounded-full transition-all duration-300 btn-3d text-lg text-center">Chart</a>
+                <div class="mt-8 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://swap.reservoir.tools/#/swap?chain=abstract&outputCurrency=0x52F572d73063fD391709254c5bD4189aA138CaD2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-full transition-all duration-300 btn-3d text-lg text-center">Buy Now</a>
+                    <a href="https://www.geckoterminal.com/abstract/pools/0x1a6d61d70e4af513f59bf0fb2ca7281ba2d0c0a2" target="_blank" rel="noopener noreferrer" class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-6 rounded-full transition-all duration-300 btn-3d text-lg text-center">Chart</a>
                 </div>
             </div>
         </section>
@@ -198,6 +211,14 @@
         </div>
     </footer>
     <script>
+        // JavaScript for mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
         // JavaScript to generate snowflakes
         document.addEventListener('DOMContentLoaded', function () {
             const snowContainer = document.getElementById('snow-container');
